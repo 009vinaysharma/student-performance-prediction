@@ -56,23 +56,58 @@ along with analytics, downloadable reports, and interactive visualizations.
 
 ---
 
-# 🖼 Dashboard Preview
+# 📸 Application Screenshots
 
-> Add your screenshots here after taking screenshots from the deployed app.
+## 🏠 Dashboard
 
-```
-screenshots/
-
-dashboard.png
-
-prediction.png
-
-analytics.png
-
-bulk_prediction.png
-```
+| Dashboard Overview                                  | Dashboard Statistics                                |
+| --------------------------------------------------- | --------------------------------------------------- |
+| <img src="Screenshots/dashboard1.png" width="100%"> | <img src="Screenshots/dashboard2.png" width="100%"> |
 
 ---
+
+## 🎯 Student Prediction
+
+| Prediction Form                                   | Student Details                                   |
+| ------------------------------------------------- | ------------------------------------------------- |
+| <img src="Screenshots/predict1.png" width="100%"> | <img src="Screenshots/predict2.png" width="100%"> |
+
+| Prediction Inputs                                 | Prediction Result                                 |
+| ------------------------------------------------- | ------------------------------------------------- |
+| <img src="Screenshots/predict3.png" width="100%"> | <img src="Screenshots/predict4.png" width="100%"> |
+
+| Confidence Score                                  | AI Recommendations                                |
+| ------------------------------------------------- | ------------------------------------------------- |
+| <img src="Screenshots/predict5.png" width="100%"> | <img src="Screenshots/predict6.png" width="100%"> |
+
+| PDF Report Preview                                |
+| ------------------------------------------------- |
+| <img src="Screenshots/predict7.png" width="100%"> |
+
+---
+
+## 📊 Analytics Dashboard
+
+| Performance Analytics                               | Feature Importance                                  |
+| --------------------------------------------------- | --------------------------------------------------- |
+| <img src="Screenshots/analytics1.png" width="100%"> | <img src="Screenshots/analytics2.png" width="100%"> |
+
+---
+
+## ℹ️ About Model
+
+| Model Overview                                        | Technical Details                                     |
+| ----------------------------------------------------- | ----------------------------------------------------- |
+| <img src="Screenshots/about-model1.png" width="100%"> | <img src="Screenshots/about-model2.png" width="100%"> |
+
+---
+
+## 📄 Download Report
+
+<p align="center">
+<img src="Screenshots/download-report.png" width="80%">
+</p>
+
 
 # 🧠 Machine Learning Models
 
