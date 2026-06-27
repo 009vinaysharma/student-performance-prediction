@@ -4,7 +4,7 @@ A machine learning project that predicts student academic performance
 (final grade and pass/fail status) based on study habits, attendance,
 demographics, and lifestyle factors — now with a premium Streamlit
 AI dashboard built on top of the existing trained models.
-
+##project live Link : https://student-performance-prediction-dlhtne9fjtqyzzokylv7hs.streamlit.app/
 ## 🚀 Run the Dashboard
 
 ```bash
