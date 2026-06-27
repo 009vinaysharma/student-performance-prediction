@@ -1,0 +1,314 @@
+/* =========================================================
+   PREMIUM AI SAAS DASHBOARD THEME
+   Dark + Glassmorphism + Purple/Blue Neon
+   ========================================================= */
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Poppins:wght@500;600;700;800&display=swap');
+
+:root {
+    --bg-primary: #0a0e1a;
+    --bg-secondary: #0f1424;
+    --glass-bg: rgba(255, 255, 255, 0.04);
+    --glass-border: rgba(255, 255, 255, 0.08);
+    --neon-purple: #a855f7;
+    --neon-blue: #3b82f6;
+    --neon-pink: #ec4899;
+    --accent-gradient: linear-gradient(135deg, #6366f1 0%, #a855f7 50%, #ec4899 100%);
+    --accent-gradient-2: linear-gradient(135deg, #3b82f6 0%, #8b5cf6 100%);
+    --text-primary: #f1f5f9;
+    --text-secondary: #94a3b8;
+    --success: #22c55e;
+    --danger: #ef4444;
+    --warning: #f59e0b;
+}
+
+/* ---------- Global App Background ---------- */
+.stApp {
+    background: radial-gradient(circle at 10% 0%, #1a1033 0%, #0a0e1a 35%, #060810 100%);
+    color: var(--text-primary);
+    font-family: 'Inter', sans-serif;
+}
+
+/* ---------- Hide Streamlit Default Chrome ---------- */
+#MainMenu {visibility: hidden;}
+footer {visibility: hidden;}
+header[data-testid="stHeader"] {background: transparent;}
+.stDeployButton {display: none;}
+div[data-testid="stToolbar"] {display: none;}
+div[data-testid="stDecoration"] {display: none;}
+
+/* ---------- Sidebar ---------- */
+section[data-testid="stSidebar"] {
+    background: linear-gradient(180deg, #120c24 0%, #0a0e1a 100%);
+    border-right: 1px solid var(--glass-border);
+}
+section[data-testid="stSidebar"] .block-container {
+    padding-top: 1.5rem;
+}
+
+/* ---------- Headings ---------- */
+h1, h2, h3, h4 {
+    font-family: 'Poppins', sans-serif;
+    color: var(--text-primary) !important;
+}
+
+/* ---------- Hero / Gradient Header ---------- */
+.hero-header {
+    background: var(--accent-gradient);
+    background-size: 200% 200%;
+    animation: gradientFlow 8s ease infinite;
+    border-radius: 24px;
+    padding: 2.4rem 2.6rem;
+    margin-bottom: 1.8rem;
+    box-shadow: 0 20px 60px -10px rgba(168, 85, 247, 0.45);
+    position: relative;
+    overflow: hidden;
+}
+.hero-header::before {
+    content: "";
+    position: absolute;
+    top: -50%; left: -50%;
+    width: 200%; height: 200%;
+    background: radial-gradient(circle, rgba(255,255,255,0.12) 0%, transparent 60%);
+    animation: rotateGlow 12s linear infinite;
+}
+@keyframes gradientFlow {
+    0% {background-position: 0% 50%;}
+    50% {background-position: 100% 50%;}
+    100% {background-position: 0% 50%;}
+}
+@keyframes rotateGlow {
+    from {transform: rotate(0deg);}
+    to {transform: rotate(360deg);}
+}
+.hero-title {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 800;
+    font-size: 2.4rem;
+    color: white;
+    margin: 0;
+    position: relative;
+    z-index: 1;
+    letter-spacing: -0.5px;
+}
+.hero-subtitle {
+    color: rgba(255,255,255,0.9);
+    font-size: 1.05rem;
+    margin-top: 0.5rem;
+    position: relative;
+    z-index: 1;
+    font-weight: 400;
+}
+.hero-badge {
+    display: inline-block;
+    background: rgba(255,255,255,0.18);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255,255,255,0.3);
+    color: white;
+    padding: 0.3rem 0.9rem;
+    border-radius: 30px;
+    font-size: 0.78rem;
+    font-weight: 600;
+    margin-top: 1rem;
+    position: relative;
+    z-index: 1;
+}
+
+/* ---------- Glass Card ---------- */
+.glass-card {
+    background: var(--glass-bg);
+    backdrop-filter: blur(16px);
+    border: 1px solid var(--glass-border);
+    border-radius: 20px;
+    padding: 1.6rem 1.8rem;
+    transition: all 0.35s ease;
+    box-shadow: 0 8px 32px rgba(0,0,0,0.25);
+    animation: fadeSlideUp 0.6s ease;
+}
+.glass-card:hover {
+    transform: translateY(-4px);
+    border-color: rgba(168, 85, 247, 0.45);
+    box-shadow: 0 16px 48px rgba(168, 85, 247, 0.18);
+}
+@keyframes fadeSlideUp {
+    from {opacity: 0; transform: translateY(16px);}
+    to {opacity: 1; transform: translateY(0);}
+}
+
+/* ---------- KPI Cards ---------- */
+.kpi-card {
+    background: var(--glass-bg);
+    backdrop-filter: blur(16px);
+    border: 1px solid var(--glass-border);
+    border-radius: 18px;
+    padding: 1.4rem 1.3rem;
+    text-align: left;
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+    animation: fadeSlideUp 0.6s ease;
+}
+.kpi-card::before {
+    content: "";
+    position: absolute;
+    top: 0; left: 0;
+    width: 4px; height: 100%;
+    background: var(--accent-gradient-2);
+}
+.kpi-card:hover {
+    transform: translateY(-6px) scale(1.02);
+    box-shadow: 0 16px 40px rgba(59, 130, 246, 0.25);
+    border-color: rgba(59, 130, 246, 0.4);
+}
+.kpi-label {
+    color: var(--text-secondary);
+    font-size: 0.82rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.6px;
+    margin-bottom: 0.4rem;
+}
+.kpi-value {
+    font-family: 'Poppins', sans-serif;
+    font-size: 2.1rem;
+    font-weight: 800;
+    background: var(--accent-gradient-2);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+.kpi-icon {
+    font-size: 1.6rem;
+    margin-bottom: 0.5rem;
+    display: inline-block;
+}
+
+/* ---------- Status Badges ---------- */
+.badge {
+    display: inline-block;
+    padding: 0.5rem 1.4rem;
+    border-radius: 30px;
+    font-weight: 700;
+    font-size: 1rem;
+    letter-spacing: 0.4px;
+    box-shadow: 0 4px 18px rgba(0,0,0,0.3);
+}
+.badge-pass {
+    background: linear-gradient(135deg, #16a34a, #22c55e);
+    color: white;
+}
+.badge-fail {
+    background: linear-gradient(135deg, #dc2626, #ef4444);
+    color: white;
+}
+
+/* ---------- Prediction Result Card ---------- */
+.result-card {
+    background: linear-gradient(135deg, rgba(99,102,241,0.12), rgba(236,72,153,0.10));
+    border: 1px solid rgba(168, 85, 247, 0.35);
+    border-radius: 22px;
+    padding: 2rem;
+    backdrop-filter: blur(20px);
+    animation: fadeSlideUp 0.5s ease;
+    box-shadow: 0 20px 50px rgba(99, 102, 241, 0.15);
+}
+
+/* ---------- Insight Card ---------- */
+.insight-card {
+    background: linear-gradient(135deg, rgba(168,85,247,0.10), rgba(59,130,246,0.10));
+    border: 1px solid rgba(168, 85, 247, 0.3);
+    border-radius: 18px;
+    padding: 1.3rem 1.5rem;
+    margin-bottom: 0.7rem;
+    transition: all 0.3s ease;
+}
+.insight-card:hover {
+    border-color: rgba(168, 85, 247, 0.6);
+    transform: translateX(4px);
+}
+
+/* ---------- Buttons ---------- */
+div.stButton > button, div.stDownloadButton > button {
+    background: var(--accent-gradient);
+    color: white;
+    border: none;
+    border-radius: 14px;
+    padding: 0.75rem 1.6rem;
+    font-weight: 700;
+    font-size: 1rem;
+    letter-spacing: 0.3px;
+    transition: all 0.3s ease;
+    box-shadow: 0 8px 24px rgba(168, 85, 247, 0.35);
+    width: 100%;
+}
+div.stButton > button:hover, div.stDownloadButton > button:hover {
+    transform: translateY(-2px) scale(1.01);
+    box-shadow: 0 12px 32px rgba(168, 85, 247, 0.5);
+}
+div.stButton > button:active {
+    transform: translateY(0) scale(0.99);
+}
+
+/* ---------- Inputs ---------- */
+div[data-baseweb="select"] > div, .stTextInput input, .stNumberInput input {
+    background: rgba(255,255,255,0.05) !important;
+    border: 1px solid var(--glass-border) !important;
+    border-radius: 12px !important;
+    color: var(--text-primary) !important;
+}
+.stSlider [data-baseweb="slider"] {
+    margin-top: 0.5rem;
+}
+
+/* ---------- Tabs / Radio in Sidebar (nav) ---------- */
+.nav-item {
+    padding: 0.7rem 1rem;
+    border-radius: 12px;
+    margin-bottom: 0.3rem;
+    transition: all 0.25s ease;
+    font-weight: 600;
+    color: var(--text-secondary);
+}
+.nav-item:hover {
+    background: rgba(168, 85, 247, 0.12);
+    color: var(--text-primary);
+}
+
+/* ---------- Section Title ---------- */
+.section-title {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 700;
+    font-size: 1.4rem;
+    margin: 1.2rem 0 0.8rem 0;
+    background: var(--accent-gradient-2);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    display: inline-block;
+}
+
+/* ---------- Divider ---------- */
+.glow-divider {
+    height: 1px;
+    background: linear-gradient(90deg, transparent, rgba(168,85,247,0.6), transparent);
+    margin: 1.5rem 0;
+    border: none;
+}
+
+/* ---------- Scrollbar ---------- */
+::-webkit-scrollbar {width: 8px;}
+::-webkit-scrollbar-track {background: var(--bg-primary);}
+::-webkit-scrollbar-thumb {background: var(--neon-purple); border-radius: 10px;}
+
+/* ---------- Dataframe styling ---------- */
+[data-testid="stDataFrame"] {
+    border-radius: 14px;
+    overflow: hidden;
+    border: 1px solid var(--glass-border);
+}
+
+/* ---------- Footer / small text ---------- */
+.small-muted {
+    color: var(--text-secondary);
+    font-size: 0.82rem;
+}

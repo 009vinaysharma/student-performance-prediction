@@ -1,0 +1,22 @@
+STUDENT PERFORMANCE PREDICTION - MODEL METRICS
+==================================================
+
+REGRESSION MODEL (final_grade)
+  MAE  : 6.20
+  RMSE : 7.52
+  R^2  : 0.714
+
+CLASSIFICATION MODEL (pass_fail)
+  Accuracy  : 0.917
+  Precision : 0.937
+  Recall    : 0.969
+  F1-score  : 0.953
+
+              precision    recall  f1-score   support
+
+        Fail       0.72      0.55      0.63        38
+        Pass       0.94      0.97      0.95       262
+
+    accuracy                           0.92       300
+   macro avg       0.83      0.76      0.79       300
+weighted avg       0.91      0.92      0.91       300
