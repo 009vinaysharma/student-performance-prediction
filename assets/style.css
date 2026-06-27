@@ -312,3 +312,7 @@ div[data-baseweb="select"] > div, .stTextInput input, .stNumberInput input {
     color: var(--text-secondary);
     font-size: 0.82rem;
 }
+/* Hide sidebar collapse button 
+[data-testid="collapsedControl"] {
+    display: none !important;
+} */
